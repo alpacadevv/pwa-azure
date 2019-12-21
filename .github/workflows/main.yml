@@ -1,0 +1,15 @@
+name: Publish Static PWA to Azure Blob Storage
+
+on: push
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v1
+    - name: Login to Azure
+      uses: Azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
