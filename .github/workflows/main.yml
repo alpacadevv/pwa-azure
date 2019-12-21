@@ -41,7 +41,7 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: app
-        path: build
+        path: public
 
     - name: Login to Azure
       uses: Azure/login@v1
@@ -64,7 +64,7 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: app
-        path: build
+        path: public
 
     - name: Login to Azure
       uses: Azure/login@v1
